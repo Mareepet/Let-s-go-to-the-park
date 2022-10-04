@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "pg": "^8.8.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon -r dotenv/config server.js"
+  },
+  "name": "let-s-go-to-the-park",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeliaMonteiro/Let-s-go-to-the-park.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeliaMonteiro/Let-s-go-to-the-park/issues"
+  },
+  "homepage": "https://github.com/HeliaMonteiro/Let-s-go-to-the-park#readme",
+  "description": ""
+}
