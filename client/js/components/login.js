@@ -1,3 +1,8 @@
+function renderLogout() {
+  state.loggedInUserName = ''
+  renderParkList()
+}
+
 function renderLogin() {
   document.querySelector('#page').innerHTML = `
     <section class='log-in'>

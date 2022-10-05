@@ -21,7 +21,7 @@ function renderAddPark() {
         </fieldset>
         <fieldset>
           <label for="">Parking: </label>
-          <input type="checkbox" name="parklot">
+          <input id="checkbox1" for="checkbox1" type="checkbox" name="parklot">
           <label for="">Toilets: </label>
           <input type="checkbox" name="toilet">
           <label for="">Playground: </label>

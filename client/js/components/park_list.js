@@ -1,17 +1,27 @@
 function renderParkList() {
   if(state.loggedInUserName) {
     document.querySelector('#page').innerHTML = `
+    <ul>
+      <li class="material-symbols-outlined add-park"onClick="renderAddPark()">add_circle</li>
+      <li class="material-symbols-outlined edit-park"onClick="renderParkList()">edit</li>
+      <li class="material-symbols-outlined sign-up"onClick="renderSignUp()">person_add</li>
+    </ul>
     <section class='park-list'>
       ${renderParks()}
     </section>
   `
+  } else {
+    document.querySelector('#page').innerHTML = `
+      <p>Please sign up/login to see the best Parks in SA!</p>
+    `
   }
 
 }
 
 function renderParks() {
-  console.log(state.parks)
+
   return state.parks.map(park => `
+  <div>
     <section class='park' data-id='${park.id}'>
       <header>
         <h2>${park.name}</h2>
@@ -27,9 +37,10 @@ function renderParks() {
       <p>${park.foodcourt}</p>
       <p>${park.trail}</p>
       <p>${park.petfriendly}</p>
-      <p>${park.description}</p>
+      <button onClick="editPark(event)">edit</button>
       <button onClick="deletePark(event)">delete</button>
     </section>
+    </div>
   `).join('')
 }
 
@@ -46,4 +57,13 @@ function deletePark(event) {
       state.parks = state.parks.filter(t => t.id != parkId)
       renderParkList()
     })
+}
+
+function editPark(event) {
+  const deleteBtn = event.target
+  const parkDOM = deleteBtn.closest('.park')
+  const parkId = parkDOM.dataset.id
+
+  state.park = state.parks.filter(t => t.id == parkId)
+  renderEditPark()
 }

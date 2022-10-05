@@ -9,8 +9,6 @@ const User = require('../models/user')
 router.post('/', (req, res) => {
   const { name, email, password } = req.body
 
-  console.log(name, email, password)
-
   // using bcrypt to create password digest
   const passwordDigest = bcrypt.hashSync(password, bcrypt.genSaltSync(10), null)
 

@@ -11,8 +11,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const { name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description } = req.body
-
-  console.log(req.body)
     
   Park
     .create(name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description)
@@ -25,6 +23,16 @@ router.delete('/:id', (req, res) => {
   Park
     .delete(parkId)
     .then(() => res.json({ message: 'park successfully deleted' }))
+})
+
+router.patch('/:id', (req, res) => {
+  const { name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description } = req.body
+  const { id } = req.params
+    
+  Park
+    .update(id, name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description)
+
+    .then(park => res.json(park))
 })
 
 module.exports = router
