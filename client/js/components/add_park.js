@@ -14,8 +14,6 @@ function renderAddParkForm() {
   window.onload = GetMap()
   return `
     <section onload="GetMap();" class='create-park'>
-    <div id="myMap" style="position:relative; height:400px; width:400px">
-        </div>
       <form onSubmit="createPark(event)">
         <h2>Add Park</h2>
         
