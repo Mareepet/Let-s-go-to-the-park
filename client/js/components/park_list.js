@@ -4,7 +4,7 @@ function renderParkList() {
     <ul>
       <li class="material-symbols-outlined add-park"onClick="renderAddPark()">add_circle</li>
       <li class="material-symbols-outlined edit-park"onClick="renderParkList()">edit</li>
-      <li class="material-symbols-outlined sign-up"onClick="renderSignUp()">person_add</li>
+      <li class="material-symbols-outlined logout"onClick="renderLogout()">logout</li>
     </ul>
     <section class='park-list'>
       ${renderParks()}
