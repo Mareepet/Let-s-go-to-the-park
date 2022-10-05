@@ -11,6 +11,8 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const { name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description } = req.body
+
+  console.log(req.body)
     
   Park
     .create(name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description)

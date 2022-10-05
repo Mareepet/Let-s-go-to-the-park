@@ -1,12 +1,16 @@
 function renderParkList() {
-  document.querySelector('#page').innerHTML = `
+  if(state.loggedInUserName) {
+    document.querySelector('#page').innerHTML = `
     <section class='park-list'>
       ${renderParks()}
     </section>
   `
+  }
+
 }
 
 function renderParks() {
+  console.log(state.parks)
   return state.parks.map(park => `
     <section class='park' data-id='${park.id}'>
       <header>
@@ -19,6 +23,7 @@ function renderParks() {
       <p>${park.toilet}</p>
       <p>${park.playground}</p>
       <p>${park.bbq}</p>
+      <p>${park.parklot}</p>
       <p>${park.foodcourt}</p>
       <p>${park.trail}</p>
       <p>${park.petfriendly}</p>

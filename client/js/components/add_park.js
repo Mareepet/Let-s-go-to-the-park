@@ -11,43 +11,34 @@ function renderAddPark() {
           <label for="">Image_url: </label>
           <input type="text" name="image">
         </fieldset>
+        <fieldset>
           <label for="">Address: </label>
           <input type="text" name="address">
         </fieldset>
+        <fieldset>
           <label for="">Entry Fees: </label>
           <input type="text" name="parkfees">
         </fieldset>
-          <label for="">Parking: </label>
-          <input type="text" name="parklot">
-        </fieldset>
-        </fieldset>
-          <label for="">Toilets: </label>
-          <input type="text" name="toilet">
-        </fieldset>
-        </fieldset>
-          <label for="">Playground: </label>
-          <input type="text" name="playground">
-        </fieldset>
-        </fieldset>
-          <label for="">Barbeque: </label>
-          <input type="text" name="bbq">
-        </fieldset>
-        </fieldset>
-          <label for="">Foodcourt: </label>
-          <input type="text" name="foodcourt">
-        </fieldset>
-        </fieldset>
-          <label for="">Trails: </label>
-          <input type="text" name="trail">
-        </fieldset>
-        </fieldset>
-          <label for="">Petfriendly: </label>
-          <input type="text" name="petfriendly">
-        </fieldset>
         <fieldset>
+          <label for="">Parking: </label>
+          <input type="checkbox" name="parklot">
+          <label for="">Toilets: </label>
+          <input type="checkbox" name="toilet">
+          <label for="">Playground: </label>
+          <input type="checkbox" name="playground">
+          <label for="">Barbeque: </label>
+          <input type="checkbox" name="bbq">
+          <label for="">Foodcourt: </label>
+          <input type="checkbox" name="foodcourt">
+          <label for="">Trails: </label>
+          <input type="checkbox" name="trail">
+          <label for="">Petfriendly: </label>
+          <input type="checkbox" name="petfriendly">
+          </fieldset>
+          <fieldset>
           <label for="">Description: </label>
           <input type="text" name="description">
-        </fieldset>
+          </fieldset>
         <button>Add Park</button>
       </form>
     </section>
