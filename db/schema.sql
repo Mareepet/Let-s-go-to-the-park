@@ -1,5 +1,8 @@
 CREATE DATABASE parks_db;
+
 \c parks_db;
+
+
 
 CREATE TABLE parks(
 id SERIAL PRIMARY KEY,
@@ -19,6 +22,7 @@ description TEXT
 
 INSERT INTO parks(name, image, address, parkfees, parklot, toilet, playground, bbq, foodcourt, trail, petfriendly, description)
 VALUES
+
   ('Morialta Conservation Park', 'https://assets.atdw-online.com.au/images/86e8352f55038fd45e35c92bda590fb3.jpeg?fit=crop&w=1000&h=700&sharp=10', 'Reade Gully, Woodforde SA 5072', 'free', true, true, true, true, true, true, true, 'For more than 100 years, Morialta Conservation Park has been a well-loved recreational escape, offering plenty to see and do for everyone. Morialta Conservation Park is a fantastic place to visit all year round. Visit during winter to see the waterfalls flowing at their strongest, and in spring to see the wildflowers at their brightest. If relaxation is more your thing, enjoy a stroll along First Falls walk to the main waterfall, or have a picnic and enjoy a fun-filled day interacting with nature around the Mukanthi Playspace. You may even spot a koala or kookaburra in the large gum trees'),
   ('Deep Creek National Park', 'hhttps://cdn.environment.sa.gov.au/img/eyJidWNrZXQiOiJlbnZzYS1idWNrZXQiLCJrZXkiOiJwYXJrcy9pbWFnZXMvcGFya3MvZGVlcC1jcmVlay1jb25zZXJ2YXRpb24tcGFyay9kZWVwLWNyZWVrLWJsb3dob2xlLWhlcm8uanBnIiwiZWRpdHMiOnsid2VicCI6eyJxdWFsaXR5Ijo2MX0sInJlc2l6ZSI6eyJ3aWR0aCI6MzIwMCwiaGVpZ2h0IjoxMTcyLCJmaXQiOiJjb3ZlciJ9LCJzaGFycGVuIjp0cnVlfX0=', 'Reade Gully, Woodforde SA 5072', '$ 12.50 per vehicle', true, true, false, false, false, true, false, 'Deep Creek National Park is the largest portion of remaining natural vegetation on the Fleurieu Peninsula and is home to an array of native wildlife such as western grey kangaroos, short beaked echidnas and 100 species of birds that can be heard and seen while walking in the park. Whales can be seen cruising the coast during their annual migration which takes place from June to October.'),
   ('Botanic Grove Reserve','https://ehq-production-australia.imgix.net/e54ec45d6f337c81f286cc0a823c6d46b1e76301/original/1601855313/BR_project_image.PNG_f66e4c91d4121506173a515d206a7a42?auto=compress%2Cformat&w=1080','37 Botanic Grove,Campbelltown SA 5074', 'free' true, true,true, true, true, true, true,'Large open grass area with a basket ball court,great place for pets & kids'),
