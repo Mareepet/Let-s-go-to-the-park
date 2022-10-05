@@ -13,6 +13,15 @@ function renderParks() {
         <h2>${park.name}</h2>
       </header>
       <img src=${park.image}></img>
+      <p>${park.address}</p>
+      <p>${park.description}</p>
+      <p>${park.parkfees}</p>
+      <p>${park.toilet}</p>
+      <p>${park.playground}</p>
+      <p>${park.bbq}</p>
+      <p>${park.foodcourt}</p>
+      <p>${park.trail}</p>
+      <p>${park.petfriendly}</p>
       <p>${park.description}</p>
       <button onClick="deletePark(event)">delete</button>
     </section>
