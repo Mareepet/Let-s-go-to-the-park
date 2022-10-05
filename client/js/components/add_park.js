@@ -1,8 +1,24 @@
 function renderAddPark() {
-  document.querySelector('#page').innerHTML = `
+  if(state.loggedInUserName) {
+    
+    document.querySelector('#page').innerHTML = `
     <section class='create-park'>
+      ${renderAddParkForm()}
+    </section>
+  `
+  }
+}
+
+function renderAddParkForm() {
+  
+  window.onload = GetMap()
+  return `
+    <section onload="GetMap();" class='create-park'>
+    <div id="myMap" style="position:relative; height:400px; width:400px">
+        </div>
       <form onSubmit="createPark(event)">
         <h2>Add Park</h2>
+        
         <fieldset>
           <label for="">Name: </label>
           <input type="text" name="name">
