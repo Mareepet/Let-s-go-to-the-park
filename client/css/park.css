@@ -29,4 +29,10 @@
   border: 2px solid #A10035; 
   transition-duration: 0.4s;
 }
- 
+ul .material-symbols-outlined .edit {
+  color: rgb(165, 111, 12);
+}
+
+ul .material-symbols-outlined .add {
+  color: rgb(7, 92, 49);
+}

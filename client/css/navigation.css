@@ -1,7 +1,43 @@
 .header-nav {
-  margin: 0 auto;
   padding: 0 1 rem;
+  margin: 0 auto;
 }
-button {
-  background-color: ;
+  button {
+  background-color: #EA5C2B;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 10px;
+  padding: 0.25em 1em;
+  font-size: 15px;
+  color:  black;
+  text-align: center;
+  float: center;
+  
+}
+button:hover {
+  font-size: 20px;
+}
+.logout-btn {
+  float: right;
+  
+}
+ .edit-park {
+  color: rgb(165, 111, 12);
+  text-align: center;
+  cursor: pointer;
+  font-size: 25px;
+}
+.edit-park:hover {
+  font-size: 30px;
+}
+
+.add {
+  color: rgb(7, 92, 49);
+  text-align: center;
+  cursor: pointer;
+  font-size: 25px;
+  
+}
+.add:hover {
+  font-size: 30px;
 }
