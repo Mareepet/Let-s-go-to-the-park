@@ -11,7 +11,7 @@ function renderAddPark() {
 
 function renderAddParkForm() {
   
-  window.onload = GetMap()
+  // window.onload = GetMap()
   return `
     <section onload="GetMap();" class='create-park'>
       <form onSubmit="createPark(event)">
