@@ -5,8 +5,8 @@ function renderParkList() {
     <ul>
       <li class="material-symbols-outlined add"onClick="renderAddPark()">add</li>
       <li class="material-symbols-outlined edit-park"onClick="renderParkList()">edit</li>
-      <li class="material-symbols-outlined logout"onClick="renderLogout()">logout</li>
     </ul>
+    <button class="logout-btn" onClick="renderLogout()">logout</button>
     <div id="myMap"></div>
     <section class='park-list'>
       ${renderParks()}
