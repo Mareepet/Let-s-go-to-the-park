@@ -23,7 +23,7 @@ function renderParkList() {
   }
 
 }
-renderGetMap()
+// renderGetMap()
 function renderParks() {
   // renderGetMap()
   return state.parks.map(park => `
