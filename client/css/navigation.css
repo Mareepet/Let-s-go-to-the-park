@@ -1,0 +1,9 @@
+.header-nav {
+  margin: 0 auto;
+  padding: 0 1 rem;
+}
+.nav ul {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

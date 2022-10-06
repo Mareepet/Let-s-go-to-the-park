@@ -74,5 +74,6 @@ function createPark(event) {
     .then(park => {
       state.parks.push(park)
       renderParkList()
+      
     })
 }

@@ -3,7 +3,7 @@ const state = {
   // loggedInUserName: null
 }
 
-function GetMap()
+function renderGetMap()
     {
         var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
           credentials: 'AlaIoCddfTLHm5Ow5scWla--GdWyvDOB0a4LuXTh3rC10_8oQzKo3Lc9ai0eyAST',
