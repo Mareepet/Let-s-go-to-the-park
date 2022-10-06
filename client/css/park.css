@@ -3,3 +3,30 @@
   width: 600px;
   height: 400px;
 }
+
+.park {
+  padding: 0 1rem;
+  padding-top: 15px;
+  border-radius: 3px;
+}
+
+.park h2 {
+  color:  #019267;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.park img{
+  width: 100%;
+}
+ .park p {
+  color: #146356;
+  font-family: 'Jost', sans-serif;
+ }
+
+ .park button{
+  background-color: #A10035;
+  color:#FFF2E5;
+  border: 2px solid #A10035; 
+  transition-duration: 0.4s;
+}
+ 
