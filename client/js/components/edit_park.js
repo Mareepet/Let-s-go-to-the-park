@@ -1,7 +1,15 @@
 function renderEditPark() {
   if(state.loggedInUserName) {
     document.querySelector('#page').innerHTML = `
-    <section class='edit-park'>
+    <nav class="header-nav">
+      <ul>
+        <li onClick="renderParkList()">Home</li>
+        <li onClick="renderAddPark()">Add Parks</li>
+        <li onClick="renderParkList()">View Parks</li>
+        <li onClick="renderLogout()">Logout</li>
+      </ul>
+    </nav>
+    <section>
       ${renderEditParkForm()}
     </section>
   `
@@ -51,7 +59,9 @@ function renderEditParkForm() {
         ${park.description}
         </textarea>
         </fieldset>
-        <button>Edit Park</button>
+        <div class="form-button-container">
+        <button>Save</button>
+        </div>
     </form>
   `).join('')
 }
@@ -69,10 +79,24 @@ function updatePark(event) {
     body: JSON.stringify(data)
   })
     .then(res => res.json())
-    .then(park => {
+    .then(async(park) => {
       state.parks = state.parks.filter(t => t.id != park.id)
-      state.parks.push(park)
+
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+
+      const result = await fetch(`http://dev.virtualearth.net/REST/v1/Locations?countryRegion=AU&addressLine=${park.name}&key=AlaIoCddfTLHm5Ow5scWla--GdWyvDOB0a4LuXTh3rC10_8oQzKo3Lc9ai0eyAST`, requestOptions)
+      .then(response => response.json())
+      .then(result => result)
       
+      console.log(result)
+      state.parks.push({
+        ...park,
+        lat: result.resourceSets[0].resources[0].point.coordinates[0],
+        long: result.resourceSets[0].resources[0].point.coordinates[1]
+      })
       renderParkList()
     })
 }
