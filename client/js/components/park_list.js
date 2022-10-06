@@ -1,15 +1,18 @@
 function renderParkList() {
   if(state.loggedInUserName) {
+
     document.querySelector('#page').innerHTML = `
     <ul>
       <li class="material-symbols-outlined add"onClick="renderAddPark()">add</li>
       <li class="material-symbols-outlined edit-park"onClick="renderParkList()">edit</li>
       <li class="material-symbols-outlined logout"onClick="renderLogout()">logout</li>
     </ul>
+    <div id="myMap"></div>
     <section class='park-list'>
       ${renderParks()}
     </section>
   `
+  renderGetMap()
   } else {
     document.querySelector('#page').innerHTML = `
       <p>Please sign up/login to see the best Parks in SA!</p>
@@ -17,9 +20,9 @@ function renderParkList() {
   }
 
 }
-
+renderGetMap()
 function renderParks() {
-
+  // renderGetMap()
   return state.parks.map(park => `
   <div>
     <section class='park' data-id='${park.id}'>
@@ -39,11 +42,13 @@ function renderParks() {
       <p>${park.petfriendly}</p>
       <button onClick="editPark(event)">edit</button>
       <button onClick="deletePark(event)">delete</button>
+      <br>
+      <div id="myMap">map is here</div>
     </section>
     </div>
   `).join('')
+  
 }
-
 function deletePark(event) {
   const deleteBtn = event.target
   const parkDOM = deleteBtn.closest('.park')
