@@ -25,7 +25,7 @@ fetch('/api/parks')
     };
   
     Promise.all(parks.map(async (park) => {
-      const result = await fetch(`http://dev.virtualearth.net/REST/v1/Locations?countryRegion=AU&addressLine=${park.name}&key=AlaIoCddfTLHm5Ow5scWla--GdWyvDOB0a4LuXTh3rC10_8oQzKo3Lc9ai0eyAST`, requestOptions)
+      const result = await fetch(`https://dev.virtualearth.net/REST/v1/Locations?countryRegion=AU&addressLine=${park.name}&key=AlaIoCddfTLHm5Ow5scWla--GdWyvDOB0a4LuXTh3rC10_8oQzKo3Lc9ai0eyAST`, requestOptions)
       .then(response => response.json())
       .then(result => result)
       return {
