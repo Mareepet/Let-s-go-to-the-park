@@ -2,6 +2,14 @@ function renderAddPark() {
   if(state.loggedInUserName) {
     
     document.querySelector('#page').innerHTML = `
+    <nav class="header-nav">
+    <ul>
+      <li onClick="renderParkList()">Home</li>
+      <li onClick="renderAddPark()">Add Parks</li>
+      <li onClick="renderParkList()">View Parks</li>
+      <li onClick="renderLogout()">Logout</li>
+    </ul>
+  </nav>
     <section class='create-park'>
       ${renderAddParkForm()}
     </section>
@@ -13,7 +21,7 @@ function renderAddParkForm() {
   
   // window.onload = GetMap()
   return `
-    <section onload="GetMap();" class='create-park'>
+    <section class='create-park'>
       <form onSubmit="createPark(event)">
         <h2>Add Park</h2>
         
@@ -53,7 +61,9 @@ function renderAddParkForm() {
           <label for="">Description: </label>
           <input type="text" name="description">
           </fieldset>
-        <button>Add Park</button>
+          <div class="form-button-container">
+          <button>Save</button>
+          </div>
       </form>
     </section>
   `
@@ -71,9 +81,23 @@ function createPark(event) {
     body: JSON.stringify(data)
   })
     .then(res => res.json())
-    .then(park => {
-      state.parks.push(park)
+    .then(async (park) => {
+      
       renderParkList()
       
+      var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+
+      const result = await fetch(`http://dev.virtualearth.net/REST/v1/Locations?countryRegion=AU&addressLine=${park.name}&key=AlaIoCddfTLHm5Ow5scWla--GdWyvDOB0a4LuXTh3rC10_8oQzKo3Lc9ai0eyAST`, requestOptions)
+      .then(response => response.json())
+      .then(result => result)
+      
+      state.parks.push({
+        ...park,
+        lat: result.resourceSets[0].resources[0].point.coordinates[0],
+        long: result.resourceSets[0].resources[0].point.coordinates[1]
+      })
     })
 }

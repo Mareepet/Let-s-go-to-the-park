@@ -8,6 +8,8 @@
   padding: 0 1rem;
   padding-top: 15px;
   border-radius: 3px;
+  max-width: 100%;
+  text-align: center;
 }
 
 .park h2 {
@@ -16,18 +18,22 @@
 }
 
 .park img{
-  width: 100%;
+  width: 70%;
 }
  .park p {
-  color: #146356;
+  color: #4e4749;
   font-family: 'Jost', sans-serif;
+  text-align: center justify;
+  padding: 0 50px 0 50px;
  }
 
  .park button{
-  background-color: #A10035;
-  color:#FFF2E5;
-  border: 2px solid #A10035; 
+  background-color: #EA5C2B;
+  
   transition-duration: 0.4s;
+}
+.park button:hover {
+  background-color: #FFF;
 }
 ul .material-symbols-outlined .edit {
   color: rgb(165, 111, 12);
@@ -35,4 +41,52 @@ ul .material-symbols-outlined .edit {
 
 ul .material-symbols-outlined .add {
   color: rgb(7, 92, 49);
+}
+ 
+.feature-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.header-nav {
+  margin: o auto;
+  padding: 0 1 rem;
+}
+
+.header-nav li {
+  padding: 0 0.5rem;
+}
+
+nav ul {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  color: #4e4749;
+  background-color: #96c931;
+  font-size: 1.50rem;
+}
+
+.map-container {
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.feature-address-container {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.form-button-container {
+  text-align: center;
 }

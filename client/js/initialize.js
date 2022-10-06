@@ -18,9 +18,29 @@ function renderGetMap()
 fetch('/api/parks')
   .then(res => res.json())
   .then(parks => {
-    state.parks = parks
+
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+  
+    Promise.all(parks.map(async (park) => {
+      const result = await fetch(`http://dev.virtualearth.net/REST/v1/Locations?countryRegion=AU&addressLine=${park.name}&key=AlaIoCddfTLHm5Ow5scWla--GdWyvDOB0a4LuXTh3rC10_8oQzKo3Lc9ai0eyAST`, requestOptions)
+      .then(response => response.json())
+      .then(result => result)
+      return {
+        ...park,
+        lat: result.resourceSets[0].resources[0].point.coordinates[0],
+        long: result.resourceSets[0].resources[0].point.coordinates[1]
+      }
+    })).then(park => {
+      state.parks = park
+    })
+
     renderParkList()
   })
+
+  
 
 fetch('/api/sessions')
 .then(res => res.json())
