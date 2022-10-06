@@ -1,12 +1,46 @@
 * {
   box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
 }
 
 body {
   margin: 0 2rem;
-  background-color: FFF1BD;
+  background-color: #FFF1BD;
 }
 
 h1 {
   font-family: 'Alfa Slab One', cursive;
+  color: #019267;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 30px;
+  color: #146356;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.main-page {
+  padding-top: 30px;
+  max-width: 100%;
+  text-align: center;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+form fieldset {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+form input {
+  padding: 0.5rem;
+  width: 100%
 }
