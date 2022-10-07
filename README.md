@@ -37,7 +37,8 @@ Only registered users are able to edit and add new parks.
 - Responsive design.
 
 ## :scream: Bugs to fix :poop:
-- Bugs here.
+- User can't refresh the page too many times it maybe changes the page layout.
+- When the user click on edit park the parks name changes automatically.
 
 ## :sob: Lessons learnt
 - Using GitHub as a team is a lot different than using it for personal projects! This project was a great opportunity to learn how to use GitHub in a collaborative environment.
@@ -47,3 +48,9 @@ Only registered users are able to edit and add new parks.
 ## :white_check_mark: Future features
 - Add a search bar with filter so the users can search for specific parks according to its facilities.
 - Add a feature to enable the users to rate and review the parks.
+- Show pushpin on park map.
+- Add email validation, because Sign up form is accepting any values.
+- Remove login and sign up button when the user is signed in. Because now If the signed user click on those buttons it goes to the forms and hasn't option to go back or logout.
+- Align facilities options with the checkbox on and and edit forms.
+- Update nav bar, because now Home and View parks has the same functionality.
+- Show the current weather for each park.
