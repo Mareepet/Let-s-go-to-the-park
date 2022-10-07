@@ -106,7 +106,7 @@ function renderParks() {
         <button onClick="deletePark(event)">delete</button>
       </div>
       <br>
-      <div id="myMap"></div>
+
     </section>
   `).join('')
   
