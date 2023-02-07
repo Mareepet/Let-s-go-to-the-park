@@ -5,7 +5,7 @@ The MVP requirements are as follow:
 - A CRUD application, with the hability to log in and log out the users.
 - Deployment on Heroku.
 
-## :computer: [Click here](https://vast-harbor-92966.herokuapp.com/) to check the app!
+## :computer: [Click here](https://lets-go-2-the-park.onrender.com) to check the app!
 
 ## :page_facing_up: About
 Let's go to the Park is an app focused in displaying information about the parks in South Australia.
